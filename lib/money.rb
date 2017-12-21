@@ -1,5 +1,6 @@
 require "money/version"
 require "money/configuration"
+require "money/money_conversion"
 
 module Money
   
