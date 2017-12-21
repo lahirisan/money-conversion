@@ -3,8 +3,8 @@ module Money
     attr_accessor :default_currency, :conversions
 
     def initialize
-      @default_currency = ''
-      @conversions      = {}
+      @default_currency = nil
+      @conversions      = nil
     end
   end
 end
