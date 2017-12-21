@@ -39,5 +39,15 @@ class MoneyConversion
         puts "Excepción de division entre 0"
       end
   end
+  
+  def + (currency_object)
+      
+      MoneyConversion.new(self.amount + currency_object.convert_to(self.default_currency).amount, self.default_currency)
+  end
+
+  def - (currency_object)
+    
+    MoneyConversion.new(self.amount - currency_object.convert_to(self.default_currency).amount, self.default_currency)
+  end
 
 end
