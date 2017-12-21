@@ -1,6 +1,11 @@
 # Money
 
-Gema que permite calcular el conversion enre distintos tipos de moneda. Este desarrollo es como parte del proceso de elección de UPSOCL
+Gema que permite calcular el conversion enre distintos tipos de moneda. Este desarrollo es como parte del proceso de elección de UPSOCL.
+La Gema permite, establecer una moneda por defecto y establecer el valor del cambio  con respecto a otras monedas. Par ello, es necesario agregar el archivo money.rb con las conversiones en la ruta  config/initializers/money.rb de la aplicación.
+
+Ej.:
+
+
 
 ## Installation
 
