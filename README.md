@@ -14,9 +14,9 @@ Ej.:
 
 Add this line to your application's Gemfile:
 
-```ruby
+
 gem 'money'
-```
+
 
 And then execute:
 
@@ -28,7 +28,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: 
+### TEst
+
+Para ejecutar los test
+
+bundle exec rake ó rake
+
+###
+
 
 Establecer los parámetros iniciales que va utlizar la gema, setearlos en config/initializers/money.rb de moneda por defecto y tipos de cambio
 
@@ -37,7 +44,7 @@ Money.configure do |config|
 	config.conversions = {"USD" => 1.11, "BTC" => 0.0047, "BsF" => 144000}
 end
 
-ó abrir una consola y pegar el bloque.
+ó abrir una consola y copiar y pegar el bloque anterior.
 
 
 fifty_eur = MoneyConversion.new(50, 'EUR')
@@ -68,20 +75,8 @@ twenty_dollars > MoneyConversion.new(5, 'USD') # => true
 twenty_dollars < fifty_eur # => true
 
 
-
-
-
 fifty_eur = Money
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/money.
 
 
 ## License
