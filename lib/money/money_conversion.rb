@@ -1,5 +1,6 @@
-# encoding: utf-8
 require "pry"
+# encoding: utf-8
+
 class MoneyConversion
   attr_accessor :default_currency, :conversions, :amount, :currency
   
@@ -27,6 +28,7 @@ class MoneyConversion
     if self.amount == 0
       result = 0
     else
+      
       if self.currency == self.default_currency                         # El cambio es directo por las conversiones
         result  = self.amount * @conversions[to_currency]                 
       elsif to_currency == self.default_currency                          # EL cambio es inverso
@@ -43,12 +45,23 @@ class MoneyConversion
   end
 
   def + (currency_object)
-      MoneyConversion.new(self.amount + currency_object.convert_to(self.currency).amount, self.currency)
+      
+      if self.currency == currency_object.currency
+        MoneyConversion.new(self.amount + currency_object.amount, self.currency)
+      else     
+        MoneyConversion.new(self.amount + currency_object.convert_to(self.currency).amount, self.currency)
+      end
+
   end
 
   def - (currency_object)
     
-    MoneyConversion.new(self.amount - currency_object.convert_to(self.currency).amount, self.currency)
+    if self.currency == currency_object.currency
+      MoneyConversion.new(self.amount - currency_object.amount, self.currency)  
+    else
+      MoneyConversion.new(self.amount - currency_object.convert_to(self.currency).amount, self.currency)
+    end
+
   end
 
   def / (divisor)
